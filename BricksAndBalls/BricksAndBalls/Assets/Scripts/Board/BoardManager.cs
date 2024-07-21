@@ -6,6 +6,11 @@ public class BoardManager : MonoBehaviour, IBoardManager
 	{
 	}
 
+	public void MoveDownBricks()
+	{
+		throw new System.NotImplementedException();
+	}
+
 	public void Test()
 	{
 		

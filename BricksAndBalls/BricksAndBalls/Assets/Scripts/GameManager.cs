@@ -1,31 +1,50 @@
+using System;
 using VContainer.Unity;
 
-public class GameManager : IStartable
+public class GameManager : IStartable, IDisposable
 {
-	private readonly BallLauncher ballLauncher;
 	private readonly ScorePresenter scorePresenter;
-	private readonly GamePlayEvents gamePlayEvent;
 	private readonly IBoardManager boardManager;
+	private readonly IPlayerStorage playerStorage;
+	private readonly ProgressionDataSo progressionDataSo;
+	
+	private GamePlayEvents gamePlayEvent;
 	
 	public GameManager(ScorePresenter scorePresenter, 
-		BallLauncher ballLauncher,
 		GamePlayEvents gamePlayEvent,
-		IBoardManager boardManager)
+		IBoardManager boardManager,
+		IPlayerStorage playerStorage,
+		ProgressionDataSo progressionDataSo)
 	{
 		this.scorePresenter = scorePresenter;
-		this.ballLauncher = ballLauncher;
 		this.gamePlayEvent = gamePlayEvent;
 		this.boardManager = boardManager;
+		this.playerStorage = playerStorage;
+		this.progressionDataSo = progressionDataSo;
 	}
 	
 	public void Start()
 	{
 		gamePlayEvent.OnBrickHit += OnBricksHit;
-		boardManager.Test();
+		gamePlayEvent.OnRoundEnd += RoundEnd;
+		LevelData levelData = progressionDataSo.GetLevel(playerStorage.GetPlayerData().LevelProgression);
+		boardManager.LoadBoard(levelData);
 	}
 
+
+	private void RoundEnd()
+	{
+		boardManager.MoveDownBricks();
+	}
+	
 	private void OnBricksHit()
 	{
 		scorePresenter.UpdateScore(1);
+	}
+
+	public void Dispose()
+	{
+		gamePlayEvent.OnRoundEnd -= RoundEnd;
+		gamePlayEvent.OnBrickHit -= OnBricksHit;
 	}
 }

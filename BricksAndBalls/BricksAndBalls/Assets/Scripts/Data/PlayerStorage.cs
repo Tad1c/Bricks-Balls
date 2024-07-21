@@ -5,11 +5,12 @@ public class PlayerStorage : IPlayerStorage
 {
 	private readonly string filePath;
 
-	public PlayerStorage(string filePath = null)
+	public PlayerStorage(string filePath)
 	{
-		this.filePath = filePath ?? Path.Combine(Application.persistentDataPath, "playerData.json");
+		this.filePath = string.IsNullOrEmpty(filePath) 
+			? Path.Combine(Application.persistentDataPath, "playerData.json") : filePath;
 	}
-	
+
 	public void SetPlayerData(PlayerData playerData)
 	{
 		string data = JsonUtility.ToJson(playerData);

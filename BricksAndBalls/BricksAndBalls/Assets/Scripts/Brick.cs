@@ -1,11 +1,9 @@
-using System;
 using TMPro;
 using UnityEngine;
 using VContainer;
 
 public class Brick : MonoBehaviour
 {
-
 	[SerializeField] private int health;
 	[SerializeField] private TMP_Text label;
 	[SerializeField] private SpriteRenderer spriteRenderer;
@@ -15,7 +13,8 @@ public class Brick : MonoBehaviour
 	private int maxHealth;
 	private GamePlayEvents gamePlayEvents;
 	private bool isHit;
-	private float hitCooldown = 0.1f; 
+	
+	private const float HitCooldown = 0.1f; 
 	private float lastHitTime;
 
 	public int Health => health;
@@ -29,7 +28,7 @@ public class Brick : MonoBehaviour
 	public void Start()
 	{
 		maxHealth = health;
-		lastHitTime = -hitCooldown;
+		lastHitTime = -HitCooldown;
 		UpdateLabel();
 		UpdateColor();
 	}
@@ -64,7 +63,7 @@ public class Brick : MonoBehaviour
 		if (other.gameObject.CompareTag("Player") && !isHit)
 		{
 			float currentTime = Time.time;
-			if (currentTime - lastHitTime >= hitCooldown)
+			if (currentTime - lastHitTime >= HitCooldown)
 			{
 				lastHitTime = currentTime;
 				isHit = true;
@@ -86,7 +85,7 @@ public class Brick : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			isHit = false; // Reset the flag when collision ends
+			isHit = false;
 		}
 	}
 }

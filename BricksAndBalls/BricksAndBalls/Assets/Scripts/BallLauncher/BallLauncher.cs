@@ -25,17 +25,20 @@ public class BallLauncher : MonoBehaviour
 	private Vector2 tempPosition;
 	private int ballsRetrieved = 0;
 	private bool canShoot = true;
-	private CameraSettings cameraSettings;
+	private ICameraSettings cameraSettings;
+	private GamePlayEvents gamePlayEvents;
 
 	[Inject]
-	public void Constructor(CameraSettings cameraSettings)
+	public void Constructor(ICameraSettings cameraSettings, GamePlayEvents gamePlayEvents)
 	{
 		this.cameraSettings = cameraSettings;
+		this.gamePlayEvents = gamePlayEvents;
+		
+		cam = cameraSettings.GetMainCamera();
 	}
 
 	private void Awake()
 	{
-		cam = Camera.main;
 		InitBalls();
 	}
 
@@ -48,27 +51,37 @@ public class BallLauncher : MonoBehaviour
 
 		if (Input.GetMouseButton(0))
 		{
-			if (!CanGetLaunchDir(out Vector2 dir))
-			{
-				aimDots.UpdateDots(dir, false);
-				return;
-			}
-
-			aimDots.UpdateDots(dir, true);
+			TryToAim();
 		}
 
 		if (Input.GetMouseButtonUp(0))
 		{
-			if (!CanGetLaunchDir(out Vector2 dir))
-			{
-				return;
-			}
-
-			LaunchBalls(dir).Forget();
-			newPosSet = false;
-			canShoot = false;
-			aimDots.UpdateDots(dir, false);
+			TryToShoot();
 		}
+	}
+
+	private void TryToAim()
+	{
+		if (!CanGetLaunchDir(out Vector2 dir))
+		{
+			aimDots.UpdateDots(dir, false);
+			return;
+		}
+
+		aimDots.UpdateDots(dir, true);
+	}
+
+	private void TryToShoot()
+	{
+		if (!CanGetLaunchDir(out Vector2 dir))
+		{
+			return;
+		}
+			
+		LaunchBalls(dir).Forget();
+		newPosSet = false;
+		canShoot = false;
+		aimDots.UpdateDots(dir, false);
 	}
 
 	private async UniTaskVoid LaunchBalls(Vector2 launchDirection)
@@ -85,10 +98,15 @@ public class BallLauncher : MonoBehaviour
 	{
 		for (int i = 0; i < numberOfBalls; i++)
 		{
-			Ball ball = Instantiate(ballPrefab, launchPoint.position, Quaternion.identity, transform);
-			ball.Init(this);
-			ballPrefabs.Add(ball);
+			CreatBall();
 		}
+	}
+
+	private void CreatBall()
+	{
+		Ball ball = Instantiate(ballPrefab, launchPoint.position, Quaternion.identity, transform);
+		ball.Init(this);
+		ballPrefabs.Add(ball);
 	}
 
 	public void SetNewPosition(Ball ball)
@@ -103,12 +121,18 @@ public class BallLauncher : MonoBehaviour
 			ball.MoveToPos(tempPosition);
 		}
 
+		BallReturned();
+	}
+
+	private void BallReturned()
+	{
 		ballsRetrieved++;
 		if (ballsRetrieved == ballPrefabs.Count)
 		{
 			canShoot = true;
 			launchPoint.position = tempPosition;
 			ballsRetrieved = 0;
+			gamePlayEvents.OnRoundEnd?.Invoke();
 		}
 	}
 

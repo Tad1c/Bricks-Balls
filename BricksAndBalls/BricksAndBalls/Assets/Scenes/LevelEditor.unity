@@ -1560,6 +1560,7 @@ MonoBehaviour:
   rightWall: {fileID: 1945171518}
   topWall: {fileID: 1768755085}
   bottomWall: {fileID: 1034069722}
+  camera: {fileID: 519420031}
 --- !u!1001 &589535507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2474,6 +2475,7 @@ MonoBehaviour:
   ballLauncher: {fileID: 596190249}
   boardManagerEditor: {fileID: 213996622}
   cameraSettings: {fileID: 519420033}
+  progressionDataSo: {fileID: 11400000, guid: e21280618e50b4c6d95d8f729fe65ad9, type: 2}
 --- !u!4 &998169970
 Transform:
   m_ObjectHideFlags: 0

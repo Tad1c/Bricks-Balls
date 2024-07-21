@@ -1,11 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
 
 public class BoardManagerEditor : MonoBehaviour, IBoardManager
 {
-
 	[SerializeField] private LevelData levelData;
 	private IObjectResolver resolver;
+	private List<Brick> bricks;
 
 	[Inject]
 	public void Constructor(IObjectResolver resolver)
@@ -36,19 +37,23 @@ public class BoardManagerEditor : MonoBehaviour, IBoardManager
 		}
 	}
 
-	public void Test()
+	public void MoveDownBricks()
 	{
-		Debug.Log("Test Succeed");
+		foreach (Brick brick in bricks)
+		{
+			brick.transform.position += Vector3.down;
+		}
 	}
 
 	private void CreateBrick(Vector2 position, int health, string prefabName)
 	{
-		Brick prefab = Resources.Load<Brick>(prefabName); // Load the prefab from Resources
+		Brick prefab = Resources.Load<Brick>(prefabName);
 		if (prefab != null)
 		{
 			Brick brick = Instantiate(prefab, position, Quaternion.identity, transform);
 			resolver.Inject(brick);
 			brick.SetHealth(health);
+			bricks.Add(brick);
 		}
 		else
 		{
@@ -58,9 +63,9 @@ public class BoardManagerEditor : MonoBehaviour, IBoardManager
 
 	private void ClearBoard()
 	{
-		foreach (Brick brick in FindObjectsOfType<Brick>())
+		while (transform.childCount > 0)
 		{
-			Destroy(brick.gameObject);
+			Destroy(transform.GetChild(0).gameObject);
 		}
 	}
 }

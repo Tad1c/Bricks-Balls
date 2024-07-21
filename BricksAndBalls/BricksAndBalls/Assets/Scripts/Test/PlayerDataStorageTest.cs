@@ -44,6 +44,7 @@ public class PlayerDataStorageTest
 		PlayerData loadedData = JsonUtility.FromJson<PlayerData>(savedData);
 
 		Assert.AreEqual(playerData.Score, loadedData.Score, "Player score was not saved correctly.");
+		Assert.AreEqual(playerData.PlayerName, loadedData.PlayerName, "Player name was not set correctly");
 		Assert.AreEqual(playerData.LevelProgression, loadedData.LevelProgression,
 			"Player level progression was not saved correctly.");
 	}
@@ -58,6 +59,7 @@ public class PlayerDataStorageTest
 		PlayerData loadedData = playerStorage.GetPlayerData();
 		
 		Assert.AreEqual(playerData.Score, loadedData.Score, "Player score was not loaded correctly.");
+		Assert.AreEqual(playerData.PlayerName, loadedData.PlayerName, "Player name was not set correctly");
 		Assert.AreEqual(playerData.LevelProgression, loadedData.LevelProgression,
 			"Player level progression was not loaded correctly.");
 	}
@@ -68,6 +70,7 @@ public class PlayerDataStorageTest
 		PlayerData loadedData = playerStorage.GetPlayerData();
 		
 		Assert.AreEqual(0, loadedData.Score, "Default player score should be 0.");
+		Assert.AreEqual(null, loadedData.PlayerName, "Player name was not set correctly");
 		Assert.AreEqual(0, loadedData.LevelProgression, "Default player level progression should be 0.");
 	}
 
@@ -76,6 +79,7 @@ public class PlayerDataStorageTest
 		return new PlayerData()
 		{
 			Score = 100,
+			PlayerName = "TestPlayer",
 			LevelProgression = 1
 		};
 	}

@@ -12,7 +12,6 @@ public class AimDots : MonoBehaviour
 	[SerializeField] private LayerMask wallLayer;
 
 	private List<GameObject> dots;
-	private bool isAiming = false;
 
 	private void Awake()
 	{

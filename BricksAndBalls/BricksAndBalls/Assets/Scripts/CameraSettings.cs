@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-public class CameraSettings : MonoBehaviour
+public class CameraSettings : MonoBehaviour, ICameraSettings
 {
 	[SerializeField] private Transform leftWall;
 	[SerializeField] private Transform rightWall;
 	[SerializeField] private Transform topWall;
 	[SerializeField] private Transform bottomWall;
-
+	[SerializeField] private new Camera camera;
 
 	private void Awake()
 	{
@@ -47,5 +47,10 @@ public class CameraSettings : MonoBehaviour
 	{
 		return position.x >= leftWall.position.x && position.x <= rightWall.position.x &&
 		       position.y >= bottomWall.position.y && position.y <= topWall.position.y;
+	}
+
+	public Camera GetMainCamera()
+	{
+		return camera;
 	}
 }
