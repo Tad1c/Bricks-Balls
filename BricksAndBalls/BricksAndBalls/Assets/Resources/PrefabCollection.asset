@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d86818d15914b91ab9f8ad71f7a291, type: 3}
+  m_Name: PrefabCollection
+  m_EditorClassIdentifier: 
+  PrefabItems:
+  - Name: Box
+    prefab: {fileID: 1036578047114533340, guid: ecfb3d8ad581a428786045c0e3d15b09, type: 3}
+    icon: {fileID: 10910, guid: 0000000000000000f000000000000000, type: 0}
+  - Name: Circle
+    prefab: {fileID: 1036578047114533340, guid: ecfb3d8ad581a428786045c0e3d15b09, type: 3}
+    icon: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}

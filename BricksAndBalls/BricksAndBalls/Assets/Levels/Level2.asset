@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f0227ab50cd44f6a3619f87ae219b4, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  Objects:
+  - PrefabName: Box
+    Position: {x: -1.9, y: -0.79999995, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 55
+  - PrefabName: Box
+    Position: {x: 0.95, y: -0.79999995, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 56
+  - PrefabName: Box
+    Position: {x: -3.8, y: 0.1500001, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 63
+  - PrefabName: Box
+    Position: {x: -2.85, y: 0.1500001, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 35
+  - PrefabName: Box
+    Position: {x: -0.95, y: 0.1500001, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 53
+  - PrefabName: Box
+    Position: {x: 0.95, y: 0.1500001, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 46
+  - PrefabName: Box
+    Position: {x: -2.85, y: 1.1, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 81
+  - PrefabName: Box
+    Position: {x: -0.95, y: 1.1, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 43
+  - PrefabName: Box
+    Position: {x: 1.9, y: 1.1, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 61
+  - PrefabName: Box
+    Position: {x: -2.85, y: 2.05, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 84
+  - PrefabName: Box
+    Position: {x: -0.95, y: 2.05, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 57
+  - PrefabName: Box
+    Position: {x: 0.95, y: 2.05, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 61
+  - PrefabName: Box
+    Position: {x: 1.9, y: 2.05, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 63
+  - PrefabName: Box
+    Position: {x: -3.8, y: 3, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 47
+  - PrefabName: Box
+    Position: {x: -1.9, y: 3, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 54
+  - PrefabName: Box
+    Position: {x: -0.95, y: 3, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 81
+  - PrefabName: Box
+    Position: {x: 0.95, y: 3, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 48
+  - PrefabName: Box
+    Position: {x: 1.9, y: 3, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 65
+  - PrefabName: Box
+    Position: {x: -3.8, y: 3.95, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 57
+  - PrefabName: Box
+    Position: {x: -0.95, y: 3.95, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 35
+  - PrefabName: Box
+    Position: {x: 0, y: 3.95, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 62
+  - PrefabName: Box
+    Position: {x: 0.95, y: 3.95, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 80
+  - PrefabName: Box
+    Position: {x: 1.9, y: 3.95, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 56
+  - PrefabName: Box
+    Position: {x: 2.85, y: 3.95, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 52
+  - PrefabName: Box
+    Position: {x: -2.85, y: 4.9, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 50
+  - PrefabName: Box
+    Position: {x: -0.95, y: 4.9, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 46
+  - PrefabName: Box
+    Position: {x: 0, y: 4.9, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 62
+  - PrefabName: Box
+    Position: {x: 0.95, y: 4.9, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 52
+  - PrefabName: Box
+    Position: {x: 1.9, y: 4.9, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 72
+  - PrefabName: Box
+    Position: {x: -3.8, y: 5.85, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 43
+  - PrefabName: Box
+    Position: {x: -2.85, y: 5.85, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 67
+  - PrefabName: Box
+    Position: {x: -0.95, y: 5.85, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 71
+  - PrefabName: Box
+    Position: {x: 0, y: 5.85, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 60
+  - PrefabName: Box
+    Position: {x: 0.95, y: 5.85, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 35
+  - PrefabName: Box
+    Position: {x: 2.85, y: 5.85, z: 0}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    Scale: {x: 0.8, y: 0.8, z: 0.8}
+    Health: 69
