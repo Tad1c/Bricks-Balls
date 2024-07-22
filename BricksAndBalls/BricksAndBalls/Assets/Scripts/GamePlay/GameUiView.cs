@@ -13,14 +13,19 @@ public class GameUiView : MonoBehaviour
 	[Header("Lose Panel")]
 	[SerializeField] private LosePanelView losePanel;
 
+	[Header("Leaderboard")]
+	[SerializeField] private LeaderBoardList leaderBoardList;
+	
+
 	public event Action<int> OnMultiplierButtonClicked;
 	public event Action OnHomeButtonClicked;
-	public event Action OnRetryButtonClicked; 
+	public event Action OnRetryButtonClicked;
+	public event Action OnLeaderboardClicked;
 
 	private void Awake()
 	{
-		winPanelView.SetHomeButton(OnHomeButtonClicked);
-		losePanel.SetButtons(OnHomeButtonClicked, OnRetryButtonClicked);
+		winPanelView.InitButtons(OnHomeButtonClicked, OnLeaderboardClicked);
+		losePanel.InitButtons(OnHomeButtonClicked, OnRetryButtonClicked, OnHomeButtonClicked);
 	}
 
 	public void ShowLosePanel()
@@ -32,6 +37,11 @@ public class GameUiView : MonoBehaviour
 	{
 		winPanelView.gameObject.SetActive(true);
 		winPanelView.SetWinPanel(score, totalScore);
+	}
+
+	public void ShowLeaderboard()
+	{
+		leaderBoardList.gameObject.SetActive(true);
 	}
 
 	public void MultiplierButton(int multiplier)

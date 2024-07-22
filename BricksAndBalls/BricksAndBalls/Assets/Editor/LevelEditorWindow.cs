@@ -27,7 +27,7 @@ public class LevelEditorWindow : EditorWindow
 	private bool showRandomLevelSettings = true;
 
 
-	[MenuItem("Window/Level Editor")]
+	[MenuItem("Tools/Level Editor")]
 	public static void ShowWindow()
 	{
 		GetWindow<LevelEditorWindow>("Level Editor");
@@ -55,7 +55,10 @@ public class LevelEditorWindow : EditorWindow
 	private void FindBoardParent()
 	{
 		levelParent = GameObject.Find("Board");
-		Undo.RegisterCreatedObjectUndo(levelParent, "Create Board");
+		if (levelParent)
+		{
+			Undo.RegisterCreatedObjectUndo(levelParent, "Create Board");
+		}
 	}
 
 	private void OnGUI()

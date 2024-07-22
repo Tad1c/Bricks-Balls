@@ -7,6 +7,7 @@ public class RootLifetimeScope : LifetimeScope
 	
 	[SerializeField] private ProgressionDataSo progressionDataSo;
 	[SerializeField] private MainMenuView mainMenuView;
+	[SerializeField] private LeaderBoardList leaderBoardList;
 	
 	protected override void Configure(IContainerBuilder builder)
 	{
@@ -15,5 +16,6 @@ public class RootLifetimeScope : LifetimeScope
 		
 		builder.RegisterComponent(progressionDataSo);
 		builder.RegisterComponent(mainMenuView);
+		builder.RegisterComponent(leaderBoardList);
 	}
 }

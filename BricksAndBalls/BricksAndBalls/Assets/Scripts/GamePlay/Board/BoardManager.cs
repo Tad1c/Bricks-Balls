@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
 
-public class BoardManagerEditor : MonoBehaviour, IBoardManager
+public class BoardManager : MonoBehaviour, IBoardManager
 {
-	[SerializeField] private LevelData levelData;
+	private LevelData levelData;
 	private IObjectResolver resolver;
 	private List<Brick> bricks = new List<Brick>();
 

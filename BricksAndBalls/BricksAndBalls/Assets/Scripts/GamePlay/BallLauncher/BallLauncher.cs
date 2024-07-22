@@ -136,9 +136,10 @@ public class BallLauncher : MonoBehaviour
 	{
 		if (!newPosSet)
 		{
+			newPosSet = true;
+			tempPosition = default;
 			ball.transform.position = new Vector2(ballPrefab.transform.position.x, ball.transform.position.y + 0.1f);
 			tempPosition = ball.transform.position;
-			newPosSet = true;
 		}
 		else
 		{

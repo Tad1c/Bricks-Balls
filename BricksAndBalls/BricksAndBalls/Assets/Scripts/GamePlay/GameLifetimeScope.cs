@@ -7,9 +7,10 @@ public class GameLifetimeScope : LifetimeScope
 	[SerializeField] private ScoreView scoreView;
 	[SerializeField] private GameUiView gameUiView;
 	[SerializeField] private BallLauncher ballLauncher;
-	[SerializeField] private BoardManagerEditor boardManagerEditor;
+	[SerializeField] private BoardManager boardManager;
 	[SerializeField] private CameraSettings cameraSettings;
 	[SerializeField] private ProgressionDataSo progressionDataSo;
+	[SerializeField] private LeaderBoardList leaderBoardList;
 	protected override void Configure(IContainerBuilder builder)
 	{
 		builder.RegisterEntryPoint<GameManager>();
@@ -20,7 +21,8 @@ public class GameLifetimeScope : LifetimeScope
 
 
 		builder.RegisterComponent(progressionDataSo);
-		builder.RegisterComponent(boardManagerEditor).As<IBoardManager>();
+		builder.RegisterComponent(leaderBoardList);
+		builder.RegisterComponent(boardManager).As<IBoardManager>();
 		builder.RegisterComponent(scoreView);
 		builder.RegisterComponent(gameUiView);
 		builder.RegisterComponent(ballLauncher);

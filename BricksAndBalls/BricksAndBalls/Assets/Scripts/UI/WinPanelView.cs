@@ -10,11 +10,13 @@ public class WinPanelView : MonoBehaviour
 	[SerializeField] private TMP_Text totalScoreTxt;
 	[SerializeField] private List<Button> multiplierButtons;
 	[SerializeField] private Button homeButton;
+	[SerializeField] private Button leaderBoardButton;
 
 	public List<Button> MultiplierButtons => multiplierButtons;
-	public void SetHomeButton(Action onClick)
+	public void InitButtons(Action onHomeClick, Action onLeaderboardClick)
 	{
-		homeButton.onClick.AddListener(() => onClick?.Invoke());
+		homeButton.onClick.AddListener(() => onHomeClick?.Invoke());
+		leaderBoardButton.onClick.AddListener(() => onLeaderboardClick?.Invoke());
 	}
 	
 	public void SetWinPanel(int score, int totalScore)

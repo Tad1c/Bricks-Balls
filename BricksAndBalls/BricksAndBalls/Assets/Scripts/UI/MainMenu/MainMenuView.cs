@@ -11,32 +11,33 @@ public class MainMenuView : MonoBehaviour
 	[SerializeField] private TMP_Text levelNumberTxt;
 	[SerializeField] private TMP_Text playerNameTxt;
 
-
+	[SerializeField] private GameObject leaderBoard;
 	[SerializeField] private GameObject enterNamePanel;
 	
 	
 	private string playerName;
 
 	public event Action OnPlayButtonClicked;
-	public event Action OnLeaderBoardButtonClicked;
 	public event Action<string> OnNewPlayerSignUp;
 
 	public void Start()
 	{
 		playButton.onClick.AddListener(() => OnPlayButtonClicked?.Invoke());
-		leaderBoardButton.onClick.AddListener(() => OnLeaderBoardButtonClicked?.Invoke());
 		signUpButton.onClick.AddListener(() =>
 		{
 			OnNewPlayerSignUp?.Invoke(playerName);
 			enterNamePanel.SetActive(false);
 		});
+		
+		leaderBoardButton.onClick.AddListener(() => ShowLeaderboard());
 	}
 
-	public void ToggleMainMenuView(bool toggle)
+
+	private void ShowLeaderboard()
 	{
-		gameObject.SetActive(toggle);
+		leaderBoard.SetActive(true);
 	}
-
+	
 	public void SetLevelTxt(int levelNumber)
 	{
 		levelNumberTxt.SetText($"Level {levelNumber}");
