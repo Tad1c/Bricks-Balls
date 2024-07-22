@@ -25,7 +25,7 @@ public class GameUiView : MonoBehaviour
 	private void Awake()
 	{
 		winPanelView.InitButtons(OnHomeButtonClicked, OnLeaderboardClicked);
-		losePanel.InitButtons(OnHomeButtonClicked, OnRetryButtonClicked, OnHomeButtonClicked);
+		losePanel.InitButtons(OnHomeButtonClicked, OnRetryButtonClicked, OnLeaderboardClicked);
 	}
 
 	public void ShowLosePanel()
