@@ -1,16 +1,20 @@
 public class ScorePresenter
 {
+	private const int POINT = 1;
+	
 	private readonly ScoreView view;
 	private int score;
 
+	public int Score => score;
+	
 	public ScorePresenter(ScoreView view)
 	{
 		this.view = view;
 	}
 	
-	public void UpdateScore(int point)
+	public void UpdateScore()
 	{
-		score += point;
+		score += POINT;
 		view.UpdateScore(score);
 	}
 }

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using VContainer;
@@ -14,15 +15,17 @@ public class Brick : MonoBehaviour
 	private GamePlayEvents gamePlayEvents;
 	private bool isHit;
 	
-	private const float HitCooldown = 0.1f; 
+	private const float HitCooldown = 0.01f; 
 	private float lastHitTime;
+	private IBoardManager boardManager;
 
 	public int Health => health;
 
 	[Inject]
-	public void Constructor(GamePlayEvents gamePlayEvents)
+	public void Constructor(GamePlayEvents gamePlayEvents, IBoardManager boardManager)
 	{
 		this.gamePlayEvents = gamePlayEvents;
+		this.boardManager = boardManager;
 	}
 
 	public void Start()
@@ -75,12 +78,21 @@ public class Brick : MonoBehaviour
 
 				if (health <= 0)
 				{
+					boardManager.ReduceBricks();
 					gameObject.SetActive(false);
 				}
 			}
 		}
 	}
-	
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("BottomWall"))
+		{
+			gamePlayEvents.OnGameLose?.Invoke();
+		}
+	}
+
 	private void OnCollisionExit2D(Collision2D other)
 	{
 		if (other.gameObject.CompareTag("Player"))

@@ -11,6 +11,11 @@ public class BoardManager : MonoBehaviour, IBoardManager
 		throw new System.NotImplementedException();
 	}
 
+	public void ReduceBricks()
+	{
+		throw new System.NotImplementedException();
+	}
+
 	public void Test()
 	{
 		

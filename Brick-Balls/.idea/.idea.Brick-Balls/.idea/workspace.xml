@@ -5,23 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f9292a2-a0aa-49c2-b390-2fdd96e91c5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/AddressableKeyAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/AddressableKeyAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/UiEnterNameDialog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/UiEnterNameDialog.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/IUiDialog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/IUiDialog.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/IUiElementPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/IUiElementPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/IUiElementView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/IUiElementView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/UiDialogHandle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/UiDialogHandle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/UiDialogService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/UiDialogService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/UiElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/UiService/UiElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Editor/LevelEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Editor/LevelEditorWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scenes/LevelEditor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scenes/LevelEditor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/AimDots.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/AimDots.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/BallLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/BallLauncher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Board/BoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Board/BoardManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Board/BoardManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Board/BoardManagerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Board/IBoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Board/IBoardManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/CameraSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/CameraSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Data/PlayerStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Data/PlayerStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/GameLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/GameLifetimeScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/GamePlayEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/GamePlayEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/LevelEditor/PrefabCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/LevelEditor/PrefabCollectionSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/LevelEditor/PrefabCollection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/LevelEditor/PrefabCollectionSo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/RootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/RootManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/UIEnterNamePopupPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/UIEnterNamePopupPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/UIEnterNamePopupView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/MainMenu/UIEnterNamePopupView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Root.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/Root.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/RootLifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Assets/Scripts/RootLifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BricksAndBalls/BricksAndBalls/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

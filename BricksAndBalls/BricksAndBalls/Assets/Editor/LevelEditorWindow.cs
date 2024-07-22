@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class LevelEditorWindow : EditorWindow
 {
-	private PrefabCollection prefabCollection;
+	private PrefabCollectionSo prefabCollection;
 	private GameObject selectedPrefab;
 	private Vector2 scrollPosition;
 	private GameObject levelParent;
@@ -176,7 +176,7 @@ public class LevelEditorWindow : EditorWindow
 	private void DisplayPrefabCollection()
 	{
 		GUILayout.BeginVertical();
-		prefabCollection = Resources.Load<PrefabCollection>("PrefabCollection");
+		prefabCollection = Resources.Load<PrefabCollectionSo>("PrefabCollection");
 
 		if (prefabCollection != null)
 		{

@@ -25,6 +25,7 @@ public class BallLauncher : MonoBehaviour
 	private Vector2 tempPosition;
 	private int ballsRetrieved = 0;
 	private bool canShoot = true;
+	private bool gameIsOver = false;
 	private ICameraSettings cameraSettings;
 	private GamePlayEvents gamePlayEvents;
 
@@ -42,8 +43,30 @@ public class BallLauncher : MonoBehaviour
 		InitBalls();
 	}
 
+	private void Start()
+	{
+		gamePlayEvents.OnGameWin += StopShooting;
+		gamePlayEvents.OnGameLose += StopShooting;
+	}
+
+	private void OnDisable()
+	{
+		gamePlayEvents.OnGameWin -= StopShooting;
+		gamePlayEvents.OnGameLose -= StopShooting;
+	}
+
+	private void StopShooting()
+	{
+		gameIsOver = true;
+	}
+
 	private void Update()
 	{
+		if (gameIsOver)
+		{
+			return;
+		}
+		
 		if (!canShoot)
 		{
 			return;
@@ -113,6 +136,7 @@ public class BallLauncher : MonoBehaviour
 	{
 		if (!newPosSet)
 		{
+			ball.transform.position = new Vector2(ballPrefab.transform.position.x, ball.transform.position.y + 0.1f);
 			tempPosition = ball.transform.position;
 			newPosSet = true;
 		}

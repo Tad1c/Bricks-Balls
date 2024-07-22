@@ -6,25 +6,21 @@ public class BoardManagerEditor : MonoBehaviour, IBoardManager
 {
 	[SerializeField] private LevelData levelData;
 	private IObjectResolver resolver;
-	private List<Brick> bricks;
+	private List<Brick> bricks = new List<Brick>();
+
+	private int totalBricks;
+	private GamePlayEvents gamePlayEvents;
 
 	[Inject]
-	public void Constructor(IObjectResolver resolver)
+	public void Constructor(IObjectResolver resolver, GamePlayEvents gamePlayEvents)
 	{
+		this.gamePlayEvents = gamePlayEvents;
 		this.resolver = resolver;
 	}
 
 	public void SetLevelData(LevelData levelData)
 	{
 		this.levelData = levelData;
-	}
-
-	private void Start()
-	{
-		if (!Application.isEditor || Application.isPlaying)
-		{
-			LoadBoard(levelData);
-		}
 	}
 
 	public void LoadBoard(LevelData levelData)
@@ -35,6 +31,8 @@ public class BoardManagerEditor : MonoBehaviour, IBoardManager
 		{
 			CreateBrick(brickData.Position, brickData.Health, brickData.PrefabName);
 		}
+
+		totalBricks = bricks.Count;
 	}
 
 	public void MoveDownBricks()
@@ -42,6 +40,15 @@ public class BoardManagerEditor : MonoBehaviour, IBoardManager
 		foreach (Brick brick in bricks)
 		{
 			brick.transform.position += Vector3.down;
+		}
+	}
+
+	public void ReduceBricks()
+	{
+		totalBricks--;
+		if (totalBricks == 0)
+		{
+			gamePlayEvents.OnGameWin?.Invoke();
 		}
 	}
 
@@ -63,9 +70,10 @@ public class BoardManagerEditor : MonoBehaviour, IBoardManager
 
 	private void ClearBoard()
 	{
-		while (transform.childCount > 0)
+		bricks.Clear();
+		foreach (Brick brick in FindObjectsOfType<Brick>())
 		{
-			Destroy(transform.GetChild(0).gameObject);
+			Destroy(brick.gameObject);
 		}
 	}
 }
