@@ -8,8 +8,7 @@ public class GameManager : IStartable, IDisposable
 	private readonly IPlayerStorage playerStorage;
 	private readonly ProgressionDataSo progressionDataSo;
 	private readonly GameUiPresenter gameUiPresenter;
-
-	private GamePlayEvents gamePlayEvent;
+	private readonly GamePlayEvents gamePlayEvent;
 
 	public GameManager(ScorePresenter scorePresenter,
 		GamePlayEvents gamePlayEvent,
